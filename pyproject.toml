@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intersect"
+version = "0.1.0"
+description = "Per-task gate that decides which catalogued skills, APIs and MCP servers an agent sees, and in what form."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Sakir Cimen" }]
+keywords = ["ai-agents", "mcp", "skills", "tool-use", "retrieval", "kutai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Framework :: AsyncIO",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = ["dabidabi @ git+https://github.com/msakirc/dabidabi.git", "kara_kutu @ git+https://github.com/msakirc/kara-kutu.git", "yalayut @ git+https://github.com/msakirc/yalayut.git", "yazbunu @ git+https://github.com/msakirc/yazbunu.git"]
+
+[project.urls]
+Homepage = "https://github.com/msakirc/intersect"
+Repository = "https://github.com/msakirc/intersect"
+Monorepo = "https://github.com/msakirc/kutai/tree/main/packages/intersect"
+
+[tool.setuptools.packages.find]
+where = ["src"]
